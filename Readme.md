@@ -4,6 +4,9 @@ Viceroy Query
 Viceroy Query is a query language developed for
 the Viceroy ORM.
 
+[![browser support](https://ci.testling.com/Battlefy/Viceroy-Query.png)
+](https://ci.testling.com/Battlefy/Viceroy-Query)
+
 Example
 -------
 ```javascript
