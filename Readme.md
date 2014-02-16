@@ -1,4 +1,3 @@
-
 Viceroy Query
 =============
 
@@ -45,6 +44,29 @@ var randomFruit = { kind: 'apple', sweetness: 74 };
 // check to see if the fruit matches the query.
 var isMatch = q.match(randomFruit);
 isMatch => true
+```
+
+Possible Query Properties
+-------------------------
+Below is an example of the possible fields in
+a query object.
+
+```javascript
+{
+  field: 'value',
+  field: /pattern/,
+  field: { $in: ['value1', 'value2'] },
+  field: { $notIn: ['notvalue1', 'notvalue2'] },
+  field: { $not: 'notvalue' },
+  field: { $gt: 1 },
+  field: { $gt: 'a' },
+  field: { $ln: 1 },
+  field: { $ln: 'a' },
+  field: { $exists: true },
+  $fields: ['field1', 'field2'],
+  $offset: 0,
+  $limit: 10
+}
 ```
 
 Query
@@ -161,26 +183,3 @@ q.filter(Array dataSet) => Array matches;
 ```
 Checks each item in a data set against the query.
 Returns an array containing the matching items.
-
-Possible Query Properties
--------------------------
-Below is an example of the possible fields in
-a query object.
-
-```javascript
-{
-  field: 'value',
-  field: /pattern/,
-  field: { $in: ['value1', 'value2'] },
-  field: { $notIn: ['notvalue1', 'notvalue2'] },
-  field: { $not: 'notvalue' },
-  field: { $gt: 1 },
-  field: { $gt: 'a' },
-  field: { $ln: 1 },
-  field: { $ln: 'a' },
-  field: { $exists: true },
-  $fields: ['field1', 'field2'],
-  $offset: 0,
-  $limit: 10
-}
-```
