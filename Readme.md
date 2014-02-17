@@ -4,6 +4,18 @@ Viceroy Query
 Viceroy Query is a query language developed for
 the (soon to be released) Viceroy ORM.
 
+Designed as a standalone package to allow other
+libraries to share a common query language. It
+can be used to filter arrays, and check for
+matches.
+
+Use it with node or in the browser using
+browserify.
+
+```shell
+npm install viceroy-query
+```
+
 #### Browser Compatibility
 [![browser support](https://ci.testling.com/Battlefy/Viceroy-Query.png)
 ](https://ci.testling.com/Battlefy/Viceroy-Query)
