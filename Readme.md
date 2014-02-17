@@ -16,9 +16,9 @@ browserify.
 npm install viceroy-query
 ```
 
-#### Browser Compatibility
-[![browser support](https://ci.testling.com/Battlefy/Viceroy-Query.png)
-](https://ci.testling.com/Battlefy/Viceroy-Query)
+[![NPM version](https://badge.fury.io/js/viceroy-query.png)](http://badge.fury.io/js/viceroy-query)
+
+[![Browser Support](https://ci.testling.com/Battlefy/Viceroy-Query.png)](https://ci.testling.com/Battlefy/Viceroy-Query)
 
 Example
 -------
