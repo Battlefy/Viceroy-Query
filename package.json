@@ -1,6 +1,6 @@
 {
   "name": "viceroy-query",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Viceroy ORM's query language implementation",
   "main": "./index.js",
   "scripts": {
