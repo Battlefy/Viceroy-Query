@@ -16,6 +16,9 @@ test('query{}', function(t) {
   var query = createQuery({});
   t.equal(typeof query.match, 'function');
   t.equal(typeof query.filter, 'function');
+  t.equal(typeof query.valueOf, 'function');
+  t.equal(typeof query.toJSON, 'function');
+  t.equal(typeof query.toString, 'function');
   t.equal(typeof query.query, 'object');
   t.equal(typeof query.opts, 'object');
   t.end();
@@ -248,6 +251,25 @@ test('query.filter()', function(t) {
     t.equal(result[i].prop4.subProp.subProp, 'subVal');
   }
 
+  t.end();
+});
+
+test('query.valueOf()', function(t) {
+  var query = { prop: 'val' };
+  t.deepEqual(createQuery(query).valueOf(), query);
+  t.end();
+});
+
+test('query.toJSON()', function(t) {
+  var query = { prop: 'val' };
+  t.deepEqual(createQuery(query).toJSON(), query);
+  t.end();
+});
+
+test('query.toString()', function(t) {
+  var query = { prop: 'val' };
+  var queryStr = JSON.stringify(query);
+  t.deepEqual(createQuery(query).toString(), queryStr);
   t.end();
 });
 
