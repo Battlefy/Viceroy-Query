@@ -4,7 +4,7 @@
   "description": "Viceroy ORM's query language implementation",
   "main": "./index.js",
   "scripts": {
-    "test": "./node_modules/.bin/faucet"
+    "test": "./node_modules/.bin/tape ./test/*.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/Battlefy/Viceroy-Query",
   "devDependencies": {
-    "faucet": "0.0.0",
     "tape": "~2.4.2"
   },
   "testling": {
