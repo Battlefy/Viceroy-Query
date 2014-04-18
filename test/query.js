@@ -197,11 +197,11 @@ test('query.filter()', function(t) {
   t.doesNotThrow(function() { query.filter([{}]); });
 
   var data = [
-    { prop: 'val', prop2: 'val2', prop3: 'val3' },
-    { prop: 'val', prop2: 'val2' },
-    { prop: 'val', prop2: 'val2', prop3: 'val3', prop4: { subProp: { subProp: 'subVal' }}},
-    { prop: 'val', prop2: 'val2' },
-    { prop2: 'val2' }
+    { prop: 'val', prop2: 'val2', prop3: 'val3', prop5: 'val3' },
+    { prop: 'val', prop2: 'val2', prop5: 'val4' },
+    { prop: 'val', prop2: 'val2', prop3: 'val3', prop4: { subProp: { subProp: 'subVal' }}, prop5: 'val1' },
+    { prop: 'val', prop2: 'val2', prop5: 'val5' },
+    { prop2: 'val2', prop5: 'val2' }
   ];
   var query = createQuery({ prop: 'val' });
   var result = query.filter(data);
@@ -251,6 +251,13 @@ test('query.filter()', function(t) {
     t.equal(result[i].prop4.subProp.subProp, 'subVal');
   }
 
+  query = createQuery({ prop: 'val', $sort: [{ prop5: 'asc' }] });
+  result = query.filter(data);
+  t.equal(result.length, 4);
+  t.deepEqual(result[0], data[2]);
+  t.deepEqual(result[1], data[0]);
+  t.deepEqual(result[2], data[1]);
+  t.deepEqual(result[3], data[3]);
   t.end();
 });
 
